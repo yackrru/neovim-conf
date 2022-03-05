@@ -22,8 +22,8 @@ repo = 'phanviet/vim-monokai-pro'
 [[plugins]]
 repo = 'preservim/nerdtree'
 hook_add = '''
-  nnoremap <silent><C-t> :NERDTreeToggle<CR>
-  nnoremap <silent><C-w> :NERDTree<CR>
+  nnoremap <C-t> :NERDTree<CR>
+  nnoremap <C-c> :NERDTreeClose<CR>
 '''
 
 [[plugins]]
@@ -59,3 +59,24 @@ repo = 'prabirshrestha/async.vim'
 
 [[plugins]]
 repo = 'prabirshrestha/asyncomplete-lsp.vim'
+
+[[plugins]]
+repo = 'prabirshrestha/asyncomplete-buffer.vim'
+
+[[plugins]]
+repo = 'prabirshrestha/asyncomplete-file.vim'
+
+[[plugins]]
+repo = 'hrsh7th/vim-vsnip'
+
+[[plugins]]
+repo = 'hrsh7th/vim-vsnip-integ'
+
+[[plugins]]
+repo = 'godlygeek/tabular'
+
+[[plugins]]
+repo = 'plasticboy/vim-markdown'
+
+[[plugins]]
+repo = 'previm/previm'

@@ -93,6 +93,7 @@ nnoremap j gj
 nnoremap k gk
 nnoremap gj j
 nnoremap gk k
+nnoremap <Space> :b#<CR>
 vnoremap j gj
 vnoremap k gk
 vnoremap gj j
@@ -108,6 +109,30 @@ cnoremap <C-e> <End>
 "-----------------------------------------------
 " Plugin settings
 "-----------------------------------------------
+" For NERDTree
 let NERDTreeShowHidden=1 " Show hidden files on NERDTree window.
 
-let g:lsp_diagnostics_enabled = 0 " Disable linter warnings
+" For lsp
+let g:lsp_diagnostics_enabled = 1
+let g:lsp_diagnostics_highlights_insert_mode_enabled = 0 " Disable linter warnings in insert mode
+let g:lsp_text_edit_enabled = 1
+let g:asyncomplete_popup_delay = 200
+function! s:on_lsp_buffer_enabled() abort
+  setlocal omnifunc=lsp#complete
+  setlocal signcolumn=yes
+  nmap <buffer> <leader>d <plug>(lsp-definition)
+  nmap <buffer> <leader>f <plug>(lsp-document-format)
+  nmap <buffer> <leader>h <plug>(lsp-hover)
+  nmap <buffer> <leader>i <plug>(lsp-implementation)
+  nmap <buffer> <leader>n <plug>(lsp-rename)
+  nmap <buffer> <leader>r <plug>(lsp-references)
+endfunction
+augroup lsp_install
+  au!
+  autocmd User lsp_buffer_enabled call s:on_lsp_buffer_enabled()
+augroup END
+
+" For markdown
+let g:vim_markdown_folding_disabled = 1
+let g:previm_enable_realtime = 1 " Enable reflecting automatically
+let g:previm_open_cmd = 'open' " Open default browser
