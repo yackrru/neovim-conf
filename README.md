@@ -6,7 +6,7 @@ My personal configurations of Neovim.
 - Python3
   - Python3 is called by `python` in the configuration.
     - means `python --version` must returns v3 or higher.
-  - `pynvim` must be installed with pip.
+  - `pynvim` must be installed by pip.
      ```
      pip install --user pynvim
      ```
@@ -84,6 +84,10 @@ Finally add `let g:airline_powerline_fonts=1` to your `.config/nvim/local.vim`.
 ### [vim-lsp](https://github.com/prabirshrestha/vim-lsp)
 Multiple LanguageServers are automatically supported by using [vim-lsp-settings](https://github.com/mattn/vim-lsp-settings).  
 However, `:LspInstallServer` command must be run for each file type.
+#### Prerequirements
+- python
+  - `pynvim` must be installed by pip.
+  - If you use `virtualenv`, you must be install `pynvim` per environment.
 #### Custom key bindings as follows.
 |Key|Command|Description|
 |:---|:---|:---|
