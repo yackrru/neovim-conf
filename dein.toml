@@ -20,11 +20,55 @@ repo = 'phanviet/vim-monokai-pro'
 # Plugins
 #-----------------------------------------------
 [[plugins]]
-repo = 'preservim/nerdtree'
 hook_add = '''
-  nnoremap <C-t> :NERDTree<CR>
-  nnoremap <C-c> :NERDTreeClose<CR>
+  autocmd VimEnter * execute 'Defx'
+  autocmd FileType defx call s:defx_my_settings()
+  autocmd BufWritePost * call defx#redraw()
+  autocmd BufEnter * call defx#redraw()
+  nnoremap <silent> <C-t> :<C-u> Defx <CR>
+
+  function! s:defx_my_settings() abort
+    nnoremap <silent><buffer><expr> <CR>
+      \ defx#do_action('drop') " Open file.
+    nnoremap <silent><buffer><expr> b
+      \ defx#do_action('cd', ['..']) " Move to parent directory.
+    nnoremap <silent><buffer><expr> ~
+      \ defx#do_action('cd') " Move to home directory.
+    nnoremap <silent><buffer><expr> i
+      \ defx#do_action('drop', 'split') " Open file with splitting window horizontally.
+    nnoremap <silent><buffer><expr> s
+      \ defx#do_action('drop', 'vsplit') " Open file with splitting window vertically.
+    nnoremap <silent><buffer><expr> o
+      \ defx#do_action('open_or_close_tree') " Open or close directory tree.
+    nnoremap <silent><buffer><expr> yy
+      \ defx#do_action('yank_path') " Yank file/directory path.
+    nnoremap <silent><buffer><expr> C
+      \ defx#do_action('copy') " Copy file.
+    nnoremap <silent><buffer><expr> P
+      \ defx#do_action('paste') " Paste file.
+    nnoremap <silent><buffer><expr> M
+      \ defx#do_action('move') " Move file.
+    nnoremap <silent><buffer><expr> D
+      \ defx#do_action('remove') " Delete file.
+    nnoremap <silent><buffer><expr> N
+      \ defx#do_action('new_file') " New file.
+    nnoremap <silent><buffer><expr> K
+      \ defx#do_action('new_directory') " New directory.
+    nnoremap <silent><buffer><expr> R
+      \ defx#do_action('rename') " Rename file.
+  endfunction
+
+  call defx#custom#option('_', {
+    \ 'buffer_name': 'explorer',
+    \ 'direction': 'topleft',
+    \ 'resume': 1,
+    \ 'show_ignored_files': 1,
+    \ 'split': 'vertical',
+    \ 'toggle': 1,
+    \ 'winwidth': 40,
+    \ })
 '''
+repo = 'Shougo/defx.nvim'
 
 [[plugins]]
 repo = 'preservim/nerdcommenter'
@@ -33,11 +77,11 @@ repo = 'preservim/nerdcommenter'
 repo = 'tpope/vim-surround'
 
 [[plugins]]
-repo = 'vim-airline/vim-airline'
 hook_add = '''
   nmap <C-p> <Plug>AirlineSelectPrevTab
   nmap <C-n> <Plug>AirlineSelectNextTab
 '''
+repo = 'vim-airline/vim-airline'
 
 [[plugins]]
 repo = 'vim-airline/vim-airline-themes'

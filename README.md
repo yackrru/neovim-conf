@@ -3,6 +3,13 @@ My personal configurations of Neovim.
 
 ## Prerequirements
 - Neovim
+- Python3
+  - Python3 is called by `python` in the configuration.
+    - means `python --version` must returns v3 or higher.
+  - `pynvim` must be installed with pip.
+     ```
+     pip install --user pynvim
+     ```
 
 ## Set up
 Install dein.vim.
@@ -25,19 +32,29 @@ nvim
 
 ## Plugins
 
-### [NERDTree](https://github.com/preservim/nerdtree)
-#### Custom key bindings as follows.
+### [defx.nvim](https://github.com/Shougo/defx.nvim)
+File explorer.
+#### Custom key bindings as follows
 |Key|Command|Description|
 |:---|:---|:---|
-|Ctrl-t|`:NERDTree`|Open or Switch to NERDTree window.|
-|Ctrl-c|`:NERDTreeClose`|Close NERDTree window.|
-#### Key often used
+|Ctrl-t|`:Defx`|Toggle (Open or Close) Defx window.|
+#### Custom key settings
+Keys behave as follows on the Defx buffer.
 |Key|Description|
 |:---|:---|
+|`<CR>`|Open file.|
+|b|Move to parent directory.|
+|~|Move to home directory.|
 |i|Open file with splitting window horizontally.|
 |s|Open file with splitting window vertically.|
-|O|Open directories recursively.|
-|x|Close directories under focusing file or directory.|
+|yy|Yank (copy) file/directory path.|
+|C|Copy file.|
+|P|Paste file.|
+|M|Move file.|
+|D|Delete file.|
+|N|New file.|
+|K|New directory.|
+|R|Rename file.|
 
 ### [NERD Commenter](https://github.com/preservim/nerdcommenter)
 >The NERDTree is a file system explorer for the Vim editor. Using this plugin, users can visually browse complex directory hierarchies, quickly open files for reading or editing, and perform basic file system operations.

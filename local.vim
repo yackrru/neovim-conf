@@ -1,6 +1,10 @@
 scriptencoding utf-8
 set encoding=utf-8
 
+" For system
+let g:python_host_prog = system('echo -n $(which python)')
+let g:python3_host_prog = system('echo -n $(which python)')
+
 "-----------------------------------------------
 " Color settings
 "-----------------------------------------------
@@ -105,6 +109,19 @@ cnoremap <C-b> <Left>
 cnoremap <C-g> <C-f>
 cnoremap <C-a> <Home>
 cnoremap <C-e> <End>
+
+"-----------------------------------------------
+" FileType settings
+"-----------------------------------------------
+augroup filetypedetect
+  au BufRead,BufNewFile *.go setfiletype go
+  au BufRead,BufNewFile *.md setfiletype markdown
+  au BufRead,BufNewFile *.php setfiletype php
+  au BufRead,BufNewFile *.py setfiletype python
+  au BufRead,BufNewFile *.rb setfiletype ruby
+  au BufRead,BufNewFile *.toml setfiletype toml
+  au BufRead,BufNewFile *.vim setfiletype vim
+augroup END
 
 "-----------------------------------------------
 " Plugin settings
