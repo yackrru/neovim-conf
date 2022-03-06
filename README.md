@@ -37,7 +37,7 @@ File explorer.
 #### Custom key bindings as follows
 |Key|Command|Description|
 |:---|:---|:---|
-|Ctrl-t|`:Defx`|Toggle (Open or Close) Defx window.|
+|`<C-t>`|`:Defx`|Toggle (Open or Close) Defx window.|
 #### Custom key settings
 Keys behave as follows on the Defx buffer.
 |Key|Description|
@@ -57,7 +57,12 @@ Keys behave as follows on the Defx buffer.
 |R|Rename file.|
 
 ### [NERD Commenter](https://github.com/preservim/nerdcommenter)
->The NERDTree is a file system explorer for the Vim editor. Using this plugin, users can visually browse complex directory hierarchies, quickly open files for reading or editing, and perform basic file system operations.
+>Comment functions so powerful—no comment necessary.
+#### Key often used
+|Key|Description|
+|:---|:---|
+|`<leader>cc`|Comment out the current line or text selected in visual mode.|
+|`<leader>cu`|Uncomments the selected line(s).|
 
 ### [surround.vim](https://github.com/tpope/vim-surround)
 >Surround.vim is all about "surroundings": parentheses, brackets, quotes, XML tags, and more.
@@ -70,8 +75,8 @@ Finally add `let g:airline_powerline_fonts=1` to your `.config/nvim/local.vim`.
 #### Custom key bindings as follows.
 |Key|Command|Description|
 |:---|:---|:---|
-|Ctrl-p|`:bprevious`|Change buffer to previous tab.|
-|Ctrl-n|`:bnext`|Change buffer to next tab.|
+|`<C-p>`|`:bprevious`|Change buffer to previous tab.|
+|`<C-n>`|`:bnext`|Change buffer to next tab.|
 
 ### [EasyMotion](https://github.com/easymotion/vim-easymotion)
 >EasyMotion provides a much simpler way to use some motions in vim. It takes the <number> out of <number>w or <number>f{char} by highlighting all possible choices and allowing you to press one key to jump directly to the target.
@@ -82,12 +87,12 @@ However, `:LspInstallServer` command must be run for each file type.
 #### Custom key bindings as follows.
 |Key|Command|Description|
 |:---|:---|:---|
-|leader-d|`:LspDefinition`|Go to definition.|
-|leader-f|`:LspDocumentFormat`|Format the entire document.|
-|leader-h|`:LspHover`|Gets the hover information and displays it in the `preview-window`.|
-|leader-i|`:LspImplementation`|Find all implementation of interface.|
-|leader-n|`:LspRename`|Rename the symbol.|
-|leader-r|`:LspReferences`|Find all references.|
+|`<leader>d`|`:LspDefinition`|Go to definition.|
+|`<leader>f`|`:LspDocumentFormat`|Format the entire document.|
+|`<leader>h`|`:LspHover`|Gets the hover information and displays it in the `preview-window`.|
+|`<leader>i`|`:LspImplementation`|Find all implementation of interface.|
+|`<leader>n`|`:LspRename`|Rename the symbol.|
+|`<leader>r`|`:LspReferences`|Find all references.|
 #### Command often used
 |Key|Description|
 |:---|:---|

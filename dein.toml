@@ -20,6 +20,7 @@ repo = 'phanviet/vim-monokai-pro'
 # Plugins
 #-----------------------------------------------
 [[plugins]]
+repo = 'Shougo/defx.nvim'
 hook_add = '''
   autocmd VimEnter * execute 'Defx'
   autocmd FileType defx call s:defx_my_settings()
@@ -68,20 +69,24 @@ hook_add = '''
     \ 'winwidth': 40,
     \ })
 '''
-repo = 'Shougo/defx.nvim'
 
 [[plugins]]
 repo = 'preservim/nerdcommenter'
+hook_add = '''
+  let g:NERDSpaceDelims = 1 " Add spaces after comment delimiters
+  let g:NERDTrimTrailingWhitespace = 1 " Enable trimming of trailing whitespace when uncommenting
+  let g:NERDToggleCheckAllLines = 1 " Enable NERDCommenterToggle to check all selected lines is commented or not
+'''
 
 [[plugins]]
 repo = 'tpope/vim-surround'
 
 [[plugins]]
+repo = 'vim-airline/vim-airline'
 hook_add = '''
   nmap <C-p> <Plug>AirlineSelectPrevTab
   nmap <C-n> <Plug>AirlineSelectNextTab
 '''
-repo = 'vim-airline/vim-airline'
 
 [[plugins]]
 repo = 'vim-airline/vim-airline-themes'
