@@ -12,6 +12,7 @@ My personal configurations of Neovim.
      ```
 
 ## Set up
+### Initial installation
 Install dein.vim.
 ```
 git clone https://github.com/yackrru/neovim-conf.git ~/.config/nvim
@@ -21,6 +22,11 @@ Start Neovim and the plugin will be installed automatically.
 ```
 nvim
 ```
+
+### LSP
+- Python
+  - `pynvim` must be installed by pip.
+  - If you use `virtualenv`, you must be install `pynvim` per environment.
 
 ## Keymaps
 ### Standard
@@ -84,10 +90,6 @@ Finally add `let g:airline_powerline_fonts=1` to your `.config/nvim/local.vim`.
 ### [vim-lsp](https://github.com/prabirshrestha/vim-lsp)
 Multiple LanguageServers are automatically supported by using [vim-lsp-settings](https://github.com/mattn/vim-lsp-settings).  
 However, `:LspInstallServer` command must be run for each file type.
-#### Prerequirements
-- python
-  - `pynvim` must be installed by pip.
-  - If you use `virtualenv`, you must be install `pynvim` per environment.
 #### Custom key bindings as follows.
 |Key|Command|Description|
 |:---|:---|:---|
