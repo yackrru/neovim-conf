@@ -116,6 +116,9 @@ repo = 'prabirshrestha/asyncomplete-buffer.vim'
 repo = 'prabirshrestha/asyncomplete-file.vim'
 
 [[plugins]]
+repo = 'mattn/vim-goimports'
+
+[[plugins]]
 repo = 'hrsh7th/vim-vsnip'
 
 [[plugins]]
