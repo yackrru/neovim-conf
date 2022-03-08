@@ -67,7 +67,7 @@ set virtualedit+=block      " Allow cursor to move to the end of the line.
 
 " For display
 set list
-set listchars=trail:-,nbsp:%,precedes:<
+set listchars=tab:>.,trail:-,nbsp:%,precedes:<
 set showmatch    " Highlight matching braces
 set matchtime=1
 
