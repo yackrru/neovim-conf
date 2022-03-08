@@ -7,9 +7,17 @@ My personal configurations of Neovim.
   - Python3 is called by `python` in the configuration.
     - means `python --version` must returns v3 or higher.
   - `pynvim` must be installed by pip.
+    - If you use `virtualenv`, you must be install `pynvim` per environment.
      ```
      pip install --user pynvim
      ```
+  - `neovim-remote` must be installed by pip.
+    - If you use `virtualenv`, you must be install `neovim-remote` per environment.
+    ```
+    pip install neovim-remote
+    ```
+- [Tig](https://github.com/jonas/tig) (optional)
+  - Can call tig on buffer with neovim-remote.
 
 ## Set up
 ### Initial installation
@@ -23,11 +31,6 @@ Start Neovim and the plugin will be installed automatically.
 nvim
 ```
 
-### LSP
-- Python
-  - `pynvim` must be installed by pip.
-  - If you use `virtualenv`, you must be install `pynvim` per environment.
-
 ## Keymaps
 ### Standard
 - `Leader`: `;`
@@ -35,6 +38,7 @@ nvim
 |Key|Command|Description|
 |:---|:---|:---|
 |Space|`:b#`|Switch to the last buffer.|
+|`<leader>t`|-|Open new buffer of `tig status`|
 
 ## Plugins
 
