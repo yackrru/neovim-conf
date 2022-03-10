@@ -111,9 +111,28 @@ repo = 'prabirshrestha/asyncomplete-lsp.vim'
 
 [[plugins]]
 repo = 'prabirshrestha/asyncomplete-buffer.vim'
+hook_add = '''
+call asyncomplete#register_source(asyncomplete#sources#buffer#get_source_options({
+  \ 'name': 'buffer',
+  \ 'allowlist': ['*'],
+  \ 'blocklist': ['go'],
+  \ 'completor': function('asyncomplete#sources#buffer#completor'),
+  \ 'config': {
+  \    'max_buffer_size': 5000000,
+  \  },
+  \ }))
+'''
 
 [[plugins]]
 repo = 'prabirshrestha/asyncomplete-file.vim'
+hook_add = '''
+au User asyncomplete_setup call asyncomplete#register_source(asyncomplete#sources#file#get_source_options({
+  \ 'name': 'file',
+  \ 'allowlist': ['*'],
+  \ 'priority': 10,
+  \ 'completor': function('asyncomplete#sources#file#completor')
+  \ }))
+'''
 
 [[plugins]]
 repo = 'mattn/vim-goimports'
