@@ -114,3 +114,12 @@ Markdown can be implemented while previewing in the browser.
 |Key|Description|
 |:---|:---|
 |`:PrevimOpen`|Start realtime preview.|
+
+### [vim-gitgutter](https://github.com/airblade/vim-gitgutter)
+>A Vim plugin which shows a git diff in the sign column.
+It shows which lines have been added, modified, or removed.
+#### Custom key bindings as follows.
+|Key|Command|Description|
+|:---|:---|:---|
+|`gt`|`:GitGutterToggle`|Toggle GitGutter display.|
+|`gh`|`:GitGutterLineHighlightsToggle`|Toggle GitGutter Line Highlights.|

@@ -151,3 +151,11 @@ repo = 'plasticboy/vim-markdown'
 
 [[plugins]]
 repo = 'previm/previm'
+
+[[plugins]]
+repo = 'airblade/vim-gitgutter'
+hook_add = '''
+  set updatetime=250
+  nnoremap gt :GitGutterToggle<CR>
+  nnoremap gh :GitGutterLineHighlightsToggle<CR>
+'''
