@@ -38,7 +38,7 @@ nvim
 |Key|Command|Description|
 |:---|:---|:---|
 |Space|`:b#`|Switch to the last buffer.|
-|`<leader>t`|-|Open new buffer of `tig status`|
+|`<leader>t`|-|Open new buffer of `tig`|
 
 ## Plugins
 

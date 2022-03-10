@@ -114,10 +114,10 @@ cnoremap <C-e> <End>
 let nvrcmd      = "nvr --remote-wait"
 let $VISUAL     = nvrcmd
 let $GIT_EDITOR = nvrcmd
-nnoremap <silent> <Leader>t :<C-u>silent call <SID>tig_status()<CR>
+nnoremap <silent> <Leader>t :<C-u>silent call <SID>tig()<CR>
 
-function! s:tig_status() abort
-  call s:open_term('tig status')
+function! s:tig() abort
+  call s:open_term('tig')
 endfunction
 
 function! s:open_term(cmd) abort
