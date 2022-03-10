@@ -177,6 +177,33 @@ augroup lsp_install
   autocmd User lsp_buffer_enabled call s:on_lsp_buffer_enabled()
 augroup END
 
+let g:lsp_settings = {
+  \   'pylsp-all': {
+  \     'workspace_config': {
+  \       'pylsp': {
+  \         'configurationSources': ['flake8'],
+  \         'plugins': {
+  \           'flake8': {
+  \             'enabled': 1
+  \           },
+  \           'mccabe': {
+  \             'enabled': 0
+  \           },
+  \           'pycodestyle': {
+  \             'enabled': 0
+  \           },
+  \           'pyflakes': {
+  \             'enabled': 0
+  \           }
+  \         }
+  \       }
+  \     }
+  \   }
+  \ }
+let g:lsp_diagnostics_signs_enabled = 0
+let g:lsp_diagnostics_echo_cursor = 1
+highlight link LspWarningHighlight Error
+
 function! s:findRoot(target)
   let dir = getcwd()
   while 1
