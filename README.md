@@ -21,6 +21,11 @@ My personal configurations of Neovim.
   ```
   go install github.com/110y/go-expr-completion@latest
   ```
+- [impl](https://github.com/josharian/impl)
+  - If you use `vim-goimpl` plugin, you must install `impl`.
+  ```
+  go install github.com/josharian/impl@latest
+  ```
 - [Tig](https://github.com/jonas/tig) (optional)
   - Can call tig on buffer with neovim-remote.
 
@@ -119,6 +124,13 @@ However, `:LspInstallServer` command must be run for each file type.
 |Key|Command|Description|
 |:---|:---|:---|
 |`ge`|`:call go#expr#complete()`|Completes the left-hand side for given expression.|
+
+### [vim-goimpl](https://github.com/mattn/vim-goimpl)
+Auto implementation go interface.
+#### Command often used
+|Key|Description|
+|:---|:---|
+|`:GoImpl [interface name]`|Implement interface under the cursor struct.|
 
 ### [previm](https://github.com/previm/previm)
 Markdown can be implemented while previewing in the browser.

@@ -144,6 +144,9 @@ autocmd FileType go nnoremap <silent> ge :<C-u>silent call go#expr#complete()<CR
 '''
 
 [[plugins]]
+repo = 'mattn/vim-goimpl'
+
+[[plugins]]
 repo = 'hrsh7th/vim-vsnip'
 
 [[plugins]]
