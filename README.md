@@ -21,10 +21,15 @@ My personal configurations of Neovim.
   ```
   go install github.com/110y/go-expr-completion@latest
   ```
-- [impl](https://github.com/josharian/impl)
+- [impl](https://github.com/josharian/impl) (optional)
   - If you use `vim-goimpl` plugin, you must install `impl`.
   ```
   go install github.com/josharian/impl@latest
+  ```
+- [go-test-name](https://github.com/110y/go-test-name) (optional)
+  - If you use `gt` key mapping, you must install `go-test-name`.
+  ```
+  go install github.com/110y/go-test-name@latest
   ```
 - [Tig](https://github.com/jonas/tig) (optional)
   - Can call tig on buffer with neovim-remote.
@@ -49,6 +54,7 @@ nvim
 |:---|:---|:---|
 |Space|`:b#`|Switch to the last buffer.|
 |`<leader>t`|-|Open new buffer of `tig`|
+|`gt`|-|Run golang func for test under the cursor.|
 
 ## Plugins
 
