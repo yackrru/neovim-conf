@@ -7,15 +7,20 @@ My personal configurations of Neovim.
   - Python3 is called by `python` in the configuration.
     - means `python --version` must returns v3 or higher.
   - `pynvim` must be installed by pip.
-    - If you use `virtualenv`, you must be install `pynvim` per environment.
+    - If you use `virtualenv`, you must install `pynvim` per environment.
      ```
      pip install --user pynvim
      ```
   - `neovim-remote` must be installed by pip.
-    - If you use `virtualenv`, you must be install `neovim-remote` per environment.
+    - If you use `virtualenv`, you must install `neovim-remote` per environment.
     ```
     pip install neovim-remote
     ```
+- [go-expr-completion](https://github.com/110y/go-expr-completion) (optional)
+  - If you use `vim-go-expr-completion` plugin, you must install `go-expr-completion`.
+  ```
+  go install github.com/110y/go-expr-completion@latest
+  ```
 - [Tig](https://github.com/jonas/tig) (optional)
   - Can call tig on buffer with neovim-remote.
 
@@ -107,6 +112,13 @@ However, `:LspInstallServer` command must be run for each file type.
 |Key|Description|
 |:---|:---|
 |`:LspInstallServer`|Automatically installs LanguageServer based on file type.|
+
+### [vim-go-expr-completion](https://github.com/110y/vim-go-expr-completion)
+>A Vim plugin to complete a left-hand side from given expression for Go.
+#### Custom key bindings as follows.
+|Key|Command|Description|
+|:---|:---|:---|
+|`ge`|`:call go#expr#complete()`|Completes the left-hand side for given expression.|
 
 ### [previm](https://github.com/previm/previm)
 Markdown can be implemented while previewing in the browser.

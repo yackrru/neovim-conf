@@ -138,6 +138,12 @@ au User asyncomplete_setup call asyncomplete#register_source(asyncomplete#source
 repo = 'mattn/vim-goimports'
 
 [[plugins]]
+repo = '110y/vim-go-expr-completion'
+hook_add = '''
+autocmd FileType go nnoremap <silent> ge :<C-u>silent call go#expr#complete()<CR>
+'''
+
+[[plugins]]
 repo = 'hrsh7th/vim-vsnip'
 
 [[plugins]]
