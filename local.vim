@@ -2,8 +2,8 @@ scriptencoding utf-8
 set encoding=utf-8
 
 " For system
-let g:python_host_prog = system('echo -n $(which python)')
-let g:python3_host_prog = system('echo -n $(which python)')
+let g:python_host_prog = system('echo -n $(which python3)')
+let g:python3_host_prog = system('echo -n $(which python3)')
 
 "-----------------------------------------------
 " Color settings
