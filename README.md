@@ -1,21 +1,21 @@
 # Neovim conf
 My personal configurations of Neovim.
 
-## Prerequirements
-- Neovim
-- Python3
-  - Python3 is called by `python` in the configuration.
-    - means `python --version` must returns v3 or higher.
-  - `pynvim` must be installed by pip.
-    - If you use `virtualenv`, you must install `pynvim` per environment.
-     ```
-     pip install --user pynvim
-     ```
-  - `neovim-remote` must be installed by pip.
-    - If you use `virtualenv`, you must install `neovim-remote` per environment.
-    ```
-    pip install neovim-remote
-    ```
+## Set up
+Install components.
+```
+git clone https://github.com/yackrru/neovim-conf.git ~/.config/nvim
+~/.config/nvim/install.sh
+```
+Configure python venv for Neovim.
+```
+~/.config/nvim/activate.sh
+```
+Start Neovim and the plugin will be installed automatically.
+```
+nvim
+```
+### Optional components
 - [go-expr-completion](https://github.com/110y/go-expr-completion) (optional)
   - If you use `vim-go-expr-completion` plugin, you must install `go-expr-completion`.
   ```
@@ -33,18 +33,6 @@ My personal configurations of Neovim.
   ```
 - [Tig](https://github.com/jonas/tig) (optional)
   - Can call tig on buffer with neovim-remote.
-
-## Set up
-### Initial installation
-Install dein.vim.
-```
-git clone https://github.com/yackrru/neovim-conf.git ~/.config/nvim
-~/.config/nvim/install.sh
-```
-Start Neovim and the plugin will be installed automatically.
-```
-nvim
-```
 
 ## Keymaps
 ### Standard

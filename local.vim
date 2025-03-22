@@ -2,8 +2,11 @@ scriptencoding utf-8
 set encoding=utf-8
 
 " For system
-let g:python_host_prog = system('echo -n $(which python3)')
-let g:python3_host_prog = system('echo -n $(which python3)')
+let s:python3_dir = $HOME . '/.nvim/python3venv'
+call system('source ' . s:python3_dir . '/bin/activate')
+let g:python_host_prog = s:python3_dir . '/bin/python'
+let g:python3_host_prog = s:python3_dir . '/bin/python'
+let $PATH = s:python3_dir . '/bin:' . $PATH
 
 "-----------------------------------------------
 " Color settings
