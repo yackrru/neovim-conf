@@ -1,6 +1,9 @@
 # Neovim conf
 My personal configurations of Neovim.
 
+## Prerequisites
+- python3
+
 ## Set up
 Install components.
 ```
